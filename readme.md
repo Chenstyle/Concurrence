@@ -8,4 +8,4 @@
 
 其一，就是这个项目创建的原因：并发。其二，是数据库（这一点好像不属于语言层面上的）。
 
-参考文档：(Java并发编程)[http://wiki.jikexueyuan.com/project/java-concurrency/]
+参考文档：[Java并发编程](http://wiki.jikexueyuan.com/project/java-concurrency/)
