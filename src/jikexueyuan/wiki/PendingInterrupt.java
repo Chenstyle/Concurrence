@@ -33,7 +33,15 @@ public class PendingInterrupt {
         System.out.println("elapsedTime = " + (System.currentTimeMillis() - startTime));
     }
 
+    public static void resetInterrupt() {
+        System.out.println("check interrupt = " + Thread.interrupted());
+        Thread.currentThread().interrupt();
+        System.out.println("check interrupt = " + Thread.interrupted());
+        System.out.println("check interrupt = " + Thread.interrupted());
+    }
+
     public static void main(String[] args) {
-        checkInterrupt();
+//        checkInterrupt();
+        resetInterrupt();
     }
 }
