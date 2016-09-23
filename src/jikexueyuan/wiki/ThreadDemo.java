@@ -22,7 +22,7 @@ class MyThread implements Runnable {
 }
 
 
-public class ThreadDemo {
+class ThreadDemo {
 
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
