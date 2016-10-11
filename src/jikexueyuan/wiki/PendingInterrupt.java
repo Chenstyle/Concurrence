@@ -40,8 +40,21 @@ public class PendingInterrupt {
         System.out.println("check interrupt = " + Thread.interrupted());
     }
 
+    public static void getThreadName() {
+        System.out.println(Thread.currentThread().getName());
+        for (int i = 0; i < 10; i++) {
+            new Thread("" + i) {
+                @Override
+                public void run() {
+                    System.out.println("Thread: " + getName() + "running");
+                }
+            }.start();
+        }
+    }
+
     public static void main(String[] args) {
 //        checkInterrupt();
-        resetInterrupt();
+//        resetInterrupt();
+        getThreadName();
     }
 }
