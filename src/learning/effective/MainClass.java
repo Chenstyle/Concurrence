@@ -1,5 +1,10 @@
 package learning.effective;
 
+import work.test.StrUtil;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+
 /**
  * @author Chenstyle
  * @date 2016/10/20 0020
@@ -8,11 +13,19 @@ package learning.effective;
 public class MainClass {
 
     public static void main(String[] args) {
-//        StaticFactory.getInstance().showName();
-//        String factoryName = StaticFactory.getInstance().mName;
-//        int age = StaticFactory.getInstance().mAge;
+        double d = 88888888.44;
 
-        AnimalHead head = new AnimalHead.Builder(3).eye(4).nose(4).ear(88).build();
+        System.out.println(d);
+
+        float d1 = (float)d;
+
+        System.out.println(d1);
+
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+        String strMon = currencyFormat.format(d).toString();
+        System.out.println(strMon);
+        strMon = strMon.substring(1, strMon.length());
+        System.out.println(strMon);
     }
 
 }
