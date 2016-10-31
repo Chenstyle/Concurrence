@@ -94,5 +94,31 @@ public class StrUtil {
 //        }
 //    }
 
+    /**
+     * 彩豆的显示规则（数字部分包括小数点最多显示4个长度）
+     *（1）0--9999以下直接显示
+     *（2）1万-9999万显示：x.xx万、xx.x万、xxx万、xxxx万；
+     *（3）1亿以上显示：x.xx亿、xx.x亿、xxx亿、xxxx亿+
+     */
 
+    public static String lotteryBeanFormat(int value) {
+        return lotteryBeanFormat(String.valueOf(value));
+    }
+
+    public static String lotteryBeanFormat(String lotteryBean) {
+
+        int numberLen = lotteryBean.length();
+        if (numberLen <= 4) {
+            // 四位数字。最大9,999 不足一万
+            return lotteryBean;
+        } else if (4 < numberLen && numberLen <= 8){
+            // 8位数字。最多99,999,999 不足一亿
+            String temp = lotteryBean.substring(0, numberLen - 4);
+
+            return "";
+        } else {
+            // 上亿的情况
+            return lotteryBean.substring(0, numberLen - 8) + "亿";
+        }
+    }
 }
