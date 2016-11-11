@@ -121,4 +121,50 @@ public class StrUtil {
             return lotteryBean.substring(0, numberLen - 8) + "亿";
         }
     }
+
+    public static String nameMiddleStart(String name) {
+        if (name.isEmpty()) {
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder(name);
+        String result;
+        switch (name.length()) {
+            case 1:
+                return name;
+            case 2:
+                result = sb.replace(1, name.length(), "*").toString();
+                return result;
+            default:
+                StringBuilder star = new StringBuilder();
+                for (int i = 0; i < name.length() - 2; i++) {
+                    star.append("*");
+                }
+                result = sb.replace(1, name.length() - 1, star.toString()).toString();
+                return result;
+        }
+    }
+
+    public static String middleStart(String name, int before, int after) {
+        StringBuilder sb = new StringBuilder(name);
+        String result;
+
+        switch (name.length()) {
+            case 1:
+                // 如果只有一个字符，直接返回
+                return name;
+            case 2:
+                // 如果有两个字符，替换后面一个字
+                result = sb.replace(1, name.length(), "*").toString();
+                return result;
+            default:
+                // 如果大于2个字符，替换中间的字符为星号
+                StringBuilder star = new StringBuilder();
+                for (int i = 0; i < name.length() - before - after; i++) {
+                    star.append("*");
+                }
+                result = sb.replace(before, name.length() - after, star.toString()).toString();
+                return result;
+        }
+    }
 }

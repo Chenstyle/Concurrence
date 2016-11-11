@@ -1,9 +1,7 @@
 package learning.effective;
 
 import work.test.StrUtil;
-
-import java.util.ArrayList;
-import java.util.List;
+import work.test.bean.LabList;
 
 /**
  * @author Chenstyle
@@ -13,22 +11,16 @@ import java.util.List;
 public class MainClass<T> {
 
     public static void main(String[] args) {
-        int bean = 78547;
-        long hehe = 14_524_175_242L;
+        String hge = "12031251421";
 
-        System.out.println(StrUtil.lotteryBeanFormat(bean));
+        System.out.println(StrUtil.middleStart(hge, 3, 4));
     }
 
-    public List<T> getList(List<T> list, int index) {
-        List<T> labList = new ArrayList<T>();
-        int count = index * 20;
-        if (list.size() < 20 || index > 5) {
-            return list;
-        } else {
-            for (int i = 0; i < count; i++) {
-                labList.add(list.get(i));
-            }
-            return labList;
+    private static void printS(String ...strings) {
+        for (String sh : strings) {
+            System.out.println(sh);
         }
     }
+
+
 }
