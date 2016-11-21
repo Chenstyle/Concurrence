@@ -1,6 +1,5 @@
 package learning.effective;
 
-import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -8,6 +7,7 @@ import java.util.TimeZone;
 /**
  * Page 17 of package name for book
  * 避免创建不必要的对象
+ *
  * @author Chenstyle
  * @date 2016/10/25 0025
  * @time 15:28

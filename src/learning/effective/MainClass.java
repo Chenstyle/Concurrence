@@ -1,6 +1,6 @@
 package learning.effective;
 
-import work.test.arithmetic.BaseSort;
+import work.test.arithmetic.AboutArr;
 
 /**
  * @author Chenstyle
@@ -10,10 +10,14 @@ import work.test.arithmetic.BaseSort;
 public class MainClass {
 
     public static void main(String[] args) {
-        int[] iArr = {1, 5, 4, 2, 3};
-        BaseSort.sort(iArr);
-        for (int i : iArr) {
-            System.out.println(i);
-        }
+        AboutArr aboutArr = new AboutArr();
+        int[] arr = aboutArr.initArr(100);
+        aboutArr.printArr(arr);
+        int[] arr2 = aboutArr.exchangeArr(arr);
+        aboutArr.printArr(arr2);
+
+
+
+        aboutArr.printArr(arr2);
     }
 }
