@@ -1,6 +1,6 @@
 package learning.effective;
 
-import work.test.arithmetic.AboutArr;
+import work.test.StrUtil;
 
 /**
  * @author Chenstyle
@@ -10,14 +10,9 @@ import work.test.arithmetic.AboutArr;
 public class MainClass {
 
     public static void main(String[] args) {
-        AboutArr aboutArr = new AboutArr();
-        int[] arr = aboutArr.initArr(100);
-        aboutArr.printArr(arr);
-        int[] arr2 = aboutArr.exchangeArr(arr);
-        aboutArr.printArr(arr2);
-
-
-
-        aboutArr.printArr(arr2);
+        long money = 123456789098765L;
+        String comm = StrUtil.lotteryBeanFormat(money);
+        String clearNum = StrUtil.removeCommaOfNumber(comm);
+        System.out.println(clearNum);
     }
 }

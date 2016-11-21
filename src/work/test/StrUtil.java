@@ -1,7 +1,5 @@
 package work.test;
 
-import java.math.BigDecimal;
-
 /**
  * @author Chenstyle
  * @date 2016/10/24 0024
@@ -10,7 +8,8 @@ import java.math.BigDecimal;
 public class StrUtil {
 
     /**
-     *  插入逗号到数字之中，只支持两位小数或没有小数
+     * 插入逗号到数字之中，只支持两位小数或没有小数
+     *
      * @param amount 数字字符串
      * @return 分割后的数字字符串
      */
@@ -73,26 +72,26 @@ public class StrUtil {
         return result;
     }
 
-//    /**
-//     *  消除金额字符中的逗号
-//     * @param commaNumber 含有逗号的金额字符串
-//     * @return 不含逗号的金额字符串
-//     */
-//    public static String removeCommaOfNumber(String commaNumber) {
-//        if (commaNumber.length() > 4) {
-//            if (commaNumber.charAt(commaNumber.length() - 4) != ',') {
-//                return commaNumber;
-//            } else {
-//                char[] commaArr = commaNumber.toCharArray();
-//                for (int i = 0; i < commaNumber.length(); i++) {
-//
-//                }
-//                return "";
-//            }
-//        } else {
-//            return commaNumber;
-//        }
-//    }
+    /**
+     * 消除金额字符中的逗号
+     *
+     * @param commaNumber 含有逗号的金额字符串
+     * @return 不含逗号的金额字符串
+     */
+    public static String removeCommaOfNumber(String commaNumber) {
+        if (commaNumber.length() > 4) {
+            char[] commaArr = commaNumber.toCharArray();
+            StringBuilder num = new StringBuilder();
+            for (int i = 0; i < commaNumber.length(); i++) {
+                if (commaArr[i] != ',') {
+                    num.append(commaArr[i]);
+                }
+            }
+            return num.toString();
+        } else {
+            return commaNumber;
+        }
+    }
 
     /**
      * 彩豆的显示规则（数字部分包括小数点最多显示4个长度）
@@ -100,28 +99,43 @@ public class StrUtil {
      *（2）1万-9999万显示：x.xx万、xx.x万、xxx万、xxxx万；
      *（3）1亿以上显示：x.xx亿、xx.x亿、xxx亿、xxxx亿+
      */
-
-    public static String lotteryBeanFormat(int value) {
+    /**
+     * 金额格式格式化彩豆
+     *
+     * @param value 需要格式化的值 如：1234
+     * @return 格式化后的字符串 如："1,234"
+     */
+    public static String lotteryBeanFormat(long value) {
         return lotteryBeanFormat(String.valueOf(value));
     }
 
+    /**
+     * 金额格式格式化彩豆
+     *
+     * @param lotteryBean 字符串类型的要格式化的数字："1234"
+     * @return 格式化后的格式："1,234"
+     */
     public static String lotteryBeanFormat(String lotteryBean) {
 
         int numberLen = lotteryBean.length();
         if (numberLen <= 4) {
             // 四位数字。最大9,999 不足一万
-            return lotteryBean;
-        } else if (4 < numberLen && numberLen <= 8){
+            return insertCommaToNumber(lotteryBean);
+        } else if (4 < numberLen && numberLen <= 8) {
             // 8位数字。最多99,999,999 不足一亿
-            String temp = lotteryBean.substring(0, numberLen - 4);
-
-            return "";
+            return insertCommaToNumber(lotteryBean.substring(0, numberLen - 4)) + "万";
         } else {
             // 上亿的情况
-            return lotteryBean.substring(0, numberLen - 8) + "亿";
+            return insertCommaToNumber(lotteryBean.substring(0, numberLen - 8)) + "亿";
         }
     }
 
+    /**
+     * 姓名中插入*号
+     *
+     * @param name 姓名："王大锤"
+     * @return 插入*号："王*锤"
+     */
     public static String nameMiddleStart(String name) {
         if (name.isEmpty()) {
             return "";
@@ -145,6 +159,14 @@ public class StrUtil {
         }
     }
 
+    /**
+     * 中间插入 * 号
+     *
+     * @param name   要改变的字符串
+     * @param before 字符串前保留位数
+     * @param after  字符串后保留位数
+     * @return 格式化后的字符串
+     */
     public static String middleStart(String name, int before, int after) {
         StringBuilder sb = new StringBuilder(name);
         String result;
@@ -166,5 +188,33 @@ public class StrUtil {
                 result = sb.replace(before, name.length() - after, star.toString()).toString();
                 return result;
         }
+    }
+
+    /**
+     * 统计一个字符串出现了几次
+     *
+     * @param content 需要统计的字符串
+     * @param target  目标字符
+     * @return 出现次数
+     */
+    public static int appearTimes(String content, String target) {
+        int cLen = content.length();
+        int tLen = target.length();
+        int times = 0;
+        if (tLen > cLen) {
+            return times;
+        }
+        if (tLen == cLen) {
+            return 1;
+        }
+        for (int i = 0; i < cLen; i++) {
+            if (tLen + i < cLen) {
+                if (target.equals(content.substring(i, tLen + i))) {
+                    times++;
+                }
+            }
+        }
+
+        return times;
     }
 }

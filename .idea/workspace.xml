@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47393594-3626-4c75-997d-821fceee928c" name="Default" comment="">
+    <list default="true" id="47393594-3626-4c75-997d-821fceee928c" name="Default" comment="tools function: find a string appear times.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" afterPath="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learning/effective/MainClass.java" afterPath="$PROJECT_DIR$/src/learning/effective/MainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/work/test/StrUtil.java" afterPath="$PROJECT_DIR$/src/work/test/StrUtil.java" />
     </list>
     <ignored path="Concurrence.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,14 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="StrUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StrUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/work/test/StrUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="286">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
-                <element signature="e#2885#2886#0" expanded="false" />
-                <element signature="e#2948#2949#0" expanded="false" />
+                <element signature="e#2947#2948#0" expanded="true" />
+                <element signature="e#3010#3011#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,18 +41,8 @@
       <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutArr.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="308">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -105,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/work/test/GTDialog.java" />
         <option value="C:/Program Files/Java/jdk1.8.0_65/jre/lib/deploy.jar!/com/sun/deploy/util/StringUtils.class" />
         <option value="$PROJECT_DIR$/out/production/Concurrence/work/test/bean/LabList.java" />
-        <option value="$PROJECT_DIR$/src/work/test/StrUtil.java" />
         <option value="$PROJECT_DIR$/src/work/test/bean/LabList.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/BaseSort.java" />
         <option value="$PROJECT_DIR$/src/work/test/StrUtilTest.groovy" />
@@ -113,9 +103,10 @@
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/Stylelife.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/StyleLife.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/Learn An introduction to algorithms.md" />
-        <option value="$PROJECT_DIR$/src/learning/effective/MainClass.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/Note.md" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
+        <option value="$PROJECT_DIR$/src/work/test/StrUtil.java" />
+        <option value="$PROJECT_DIR$/src/learning/effective/MainClass.java" />
       </list>
     </option>
   </component>
@@ -768,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479712634945</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="replenish arithmetic">
+      <created>1479712863067</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1479712863067</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -856,11 +854,13 @@
     <MESSAGE value="test" />
     <MESSAGE value="Add start to String" />
     <MESSAGE value="Base arithmetic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base arithmetic" />
+    <MESSAGE value="replenish arithmetic" />
+    <MESSAGE value="tools function: find a string appear times." />
+    <option name="LAST_COMMIT_MESSAGE" value="tools function: find a string appear times." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1131,32 +1131,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="2939" column="0" selection-start-line="2939" selection-start-column="0" selection-end-line="2939" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/Sort.java" />
     <entry file="file://$PROJECT_DIR$/src/work/test/StrUtilTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/work/test/StrUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="e#2885#2886#0" expanded="false" />
-            <element signature="e#2948#2949#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/learning/effective/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,19 +1175,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="154">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="158">
+          <caret line="655" column="16" selection-start-line="655" selection-start-column="16" selection-end-line="655" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/work/test/StrUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="e#2947#2948#0" expanded="true" />
+            <element signature="e#3010#3011#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
