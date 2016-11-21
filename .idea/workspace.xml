@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47393594-3626-4c75-997d-821fceee928c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/work/test/arithmetic/Note.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learning/effective/MainClass.java" afterPath="$PROJECT_DIR$/src/learning/effective/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learning/effective/Person.java" afterPath="$PROJECT_DIR$/src/learning/effective/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" afterPath="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
     </list>
     <ignored path="Concurrence.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,28 +40,18 @@
       <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Note.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/Note.md">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AboutArr.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AboutArr.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="176">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -127,8 +114,8 @@
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/StyleLife.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/Learn An introduction to algorithms.md" />
         <option value="$PROJECT_DIR$/src/learning/effective/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
         <option value="$PROJECT_DIR$/src/work/test/arithmetic/Note.md" />
+        <option value="$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java" />
       </list>
     </option>
   </component>
@@ -774,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479369978699</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Base arithmetic">
+      <created>1479712634945</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1479712634945</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1161,6 +1155,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,14 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/BaseSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1196,18 +1185,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
+    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/Note.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/Note.md">
+    <entry file="file://$PROJECT_DIR$/src/learning/effective/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/work/test/arithmetic/AboutArr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
