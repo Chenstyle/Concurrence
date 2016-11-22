@@ -5,6 +5,7 @@ package work.test;
  * @date 2016/10/24 0024
  * @time 9:43
  */
+@SuppressWarnings("unused")
 public class StrUtil {
 
     /**
@@ -93,12 +94,13 @@ public class StrUtil {
         }
     }
 
-    /**
-     * 彩豆的显示规则（数字部分包括小数点最多显示4个长度）
-     *（1）0--9999以下直接显示
-     *（2）1万-9999万显示：x.xx万、xx.x万、xxx万、xxxx万；
-     *（3）1亿以上显示：x.xx亿、xx.x亿、xxx亿、xxxx亿+
+    /*
+      彩豆的显示规则（数字部分包括小数点最多显示4个长度）
+     （1）0--9999以下直接显示
+     （2）1万-9999万显示：x.xx万、xx.x万、xxx万、xxxx万；
+     （3）1亿以上显示：x.xx亿、xx.x亿、xxx亿、xxxx亿+
      */
+
     /**
      * 金额格式格式化彩豆
      *
@@ -160,7 +162,7 @@ public class StrUtil {
     }
 
     /**
-     * 中间插入 * 号
+     * 字符串中间插入 * 号
      *
      * @param name   要改变的字符串
      * @param before 字符串前保留位数

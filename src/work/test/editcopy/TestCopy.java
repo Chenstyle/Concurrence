@@ -4,12 +4,17 @@ package work.test.editcopy;
  * Created by Chenstyle on 2016/9/27 0027.
  */
 public class TestCopy {
-    public static final String CODE = "6756214263451223";
-    public static final String CODE_LONG = "6756214263451223321";
-    public static final String CODE_CUT = "6756 2142 63451223";
-    public static final String CODE_SHORT = "67562142634512";
+    private static final String CODE = "6756214263451223";
+    private static final String CODE_LONG = "6756214263451223321";
+    private static final String CODE_CUT = "6756 2142 63451223";
+    private static final String CODE_SHORT = "67562142634512";
 
-    public static String usingCode(String sCode) {
+    /**
+     * 去除字符串中的空格，并按4个一组隔开
+     * @param sCode 需要处理的字符串
+     * @return 按4个字符一组隔开的字符串
+     */
+    private static String usingCode(String sCode) {
         if (sCode.length() < 19) {
             String s = sCode.replace(" ", "");
             char[] arrCode = s.toCharArray();
