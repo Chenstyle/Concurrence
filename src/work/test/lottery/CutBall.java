@@ -51,7 +51,7 @@ public class CutBall {
      * @param cardNo 银行卡卡号
      * @return 格式化的银行卡卡号
      */
-    private static String formatCardNo(String cardNo) {
+    public static String formatCardNo(String cardNo) {
         // 需要添加的空格
         String place = " ";
 
