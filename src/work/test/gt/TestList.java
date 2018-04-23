@@ -1,18 +1,20 @@
 package work.test.gt;
 
+import java.util.ArrayList;
+
 /**
  * @author Chenstyle
  *         2017-5-12
  */
 public class TestList {
 
-    public static void main(String[] args) {
+    private final ArrayList<String> mList = new ArrayList<>();
 
-        String brCode = "1120923957258492080";
-
-
-        System.out.println(formatBaNum(brCode));
+    public void addList(String list) {
+        mList.add(list);
     }
+
+
 
     /**
      * 格式化条形码，格式为4-4-4-7。前面三个4位，后面一股脑出来
