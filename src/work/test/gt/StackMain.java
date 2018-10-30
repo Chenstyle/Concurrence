@@ -3,13 +3,14 @@ package work.test.gt;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.util.*;
 
 /**
  * @author Chenstyle
@@ -25,10 +26,127 @@ public class StackMain {
     }
 
     public static void main(String[] args) throws IOException {
-        File file = new File("D:\\360极速浏览器下载\\计算机科学概论 原书第3版 .pdf");
-        System.out.println(System.currentTimeMillis());
-        System.out.println(countFileMD5(file));
-        System.out.println(System.currentTimeMillis());
+        int[] nums = {0, 0, 0, 0, 0};
+        threeSum(nums);
+    }
+
+    public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> resultList = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                for (int z = j + 1; z < nums.length; z++) {
+                    if (0 == nums[i] + nums[j] + nums[z]) {
+                        List<Integer> list = new ArrayList<>();
+                        list.add(nums[i]);
+                        list.add(nums[j]);
+                        list.add(nums[z]);
+                        resultList.add(list);
+                    }
+                }
+            }
+        }
+        int removeIndex = 0;
+        for (int i = 0; i < resultList.size(); i++) {
+            for (List<Integer> list : resultList) {
+                if (resultList.get(i).equals(list)) {
+                    removeIndex = i;
+                }
+            }
+        }
+        if (removeIndex != 0) {
+            resultList.remove(removeIndex);
+        }
+
+        return resultList;
+    }
+
+    public static int[] twoSum2(int[] nums, int target) {
+        int num1 = 0, num2 = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (target == nums[i] + nums[j]) {
+                    num1 = j;
+                    num2 = i;
+                    break;
+                }
+            }
+        }
+
+        return new int[]{num1, num2};
+    }
+
+    public static String randomUUID() {
+        String uuid = UUID.randomUUID().toString();
+        return uuid.replace("-", "");
+    }
+
+    /**
+     * 生成64位UUID
+     *
+     * @return
+     */
+    public static String generateUUID64() {
+        return (randomUUID() + randomUUID());
+    }
+
+    /**
+     * 给定 nums = [2, 7, 11, 15], target = 9
+     * 因为 nums[0] + nums[1] = 2 + 7 = 9
+     * 所以返回 [0, 1]
+     */
+
+    private static int[] twoSum(int[] nums, int target) {
+        int sum0 = 0, sum1 = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int i1 = i + 1; i1 < nums.length; i1++) {
+                if (target == nums[i] + nums[i1]) {
+                    sum0 = i;
+                    sum1 = i1;
+                    break;
+                }
+
+            }
+
+        }
+
+        return new int[]{sum0, sum1};
+    }
+
+    /**
+     * 将分为单位的金额转换为元，并格式化数字
+     *
+     * @param centMoney 以分为单位的金额
+     * @return XX.XX 格式，以元为单位的金额
+     */
+
+    public static String centToBunk(String centMoney) {
+        try {
+
+            BigDecimal x1 = BigDecimal.valueOf(Float.parseFloat(centMoney));
+            BigDecimal x2 = BigDecimal.valueOf(100.0f);
+            return String.format(Locale.getDefault(), "%.2f", x1.divide(x2));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+        return "0.00";
+    }
+
+
+    /**
+     * 对小数保留多位四舍五入，在整数后面增加多位0作为后缀
+     *
+     * @param number  需要转换的数字 多为单位为元的金额
+     * @param decimal 在此单位后添加0的个数
+     * @return 返回 X.xx 格式的字符串
+     */
+    public static String round(String number, int decimal) {
+        double double1 = Double.parseDouble(number);
+        BigDecimal setScale = new BigDecimal(double1).setScale(decimal, RoundingMode.HALF_UP);
+        return String.valueOf(setScale);
     }
 
     /**
